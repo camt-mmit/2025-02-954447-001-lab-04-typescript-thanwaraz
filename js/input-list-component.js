@@ -51,7 +51,7 @@ export function createComponent(componentElem) {
             return;
         inputContainer.addEventListener('click', (ev) => {
             const target = ev.target;
-            if (target === null || target === void 0 ? void 0 : target.matches('.app-cmd-remove-number-input')) {
+            if (target?.matches('.app-cmd-remove-number-input')) {
                 inputContainer.remove();
                 regenerateTitleNumbersAndStatus();
                 recalculateResult();
@@ -64,14 +64,14 @@ export function createComponent(componentElem) {
     // Event delegation: change input
     inputListContainer.addEventListener('change', (ev) => {
         const target = ev.target;
-        if (target === null || target === void 0 ? void 0 : target.matches('.app-inp-number')) {
+        if (target?.matches('.app-inp-number')) {
             recalculateResult();
         }
     });
     // Event delegation: add input
     componentElem.addEventListener('click', (ev) => {
         const target = ev.target;
-        if (target === null || target === void 0 ? void 0 : target.matches('.app-cmd-add-number-input')) {
+        if (target?.matches('.app-cmd-add-number-input')) {
             createInputComponent();
         }
     });
@@ -79,3 +79,4 @@ export function createComponent(componentElem) {
     createInputComponent();
     return componentElem;
 }
+//# sourceMappingURL=input-list-component.js.map

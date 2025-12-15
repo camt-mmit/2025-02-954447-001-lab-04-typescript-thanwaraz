@@ -54,3 +54,4 @@ document.addEventListener('click', (ev) => {
 // โหลด section แรกตอนเริ่มหน้า
 addSection();
 regenerateSectionTitles();
+//# sourceMappingURL=section-list-component.js.map
